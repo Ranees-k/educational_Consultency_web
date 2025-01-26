@@ -44,7 +44,7 @@ const Contact = () => {
             alert('Form submitted!');
           }}
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="contact" action="/?netlify-debug=true"/>
           <label>Your name</label>
           <input type="text" name="name" placeholder="Enter your name" required />
           <label>Phone Number</label>
