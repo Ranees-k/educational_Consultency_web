@@ -39,12 +39,9 @@ const Contact = () => {
           name="contact"
           method="POST"
           data-netlify="true"
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert('Form submitted!');
-          }}
+          action="/?success=true&netlify-debug=true" // Add success and debug parameters
         >
-          <input type="hidden" name="form-name" value="contact" action="/?netlify-debug=true"/>
+          <input type="hidden" name="form-name" value="contact" />
           <label>Your name</label>
           <input type="text" name="name" placeholder="Enter your name" required />
           <label>Phone Number</label>
@@ -56,7 +53,6 @@ const Contact = () => {
           </button>
         </form>
         {success && <span>Thank you for your message! We'll get back to you soon.</span>}
-
       </div>
     </div>
   );
